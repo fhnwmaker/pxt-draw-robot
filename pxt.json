@@ -11,8 +11,8 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "_locales/en/pxt-draw-robots-strings.json",
-        "_locales/de/pxt-draw-robots-strings.json"
+        "_locales/pxt-draw-robot-strings.json",
+        "_locales/de/pxt-draw-robot-strings.json"
     ],
     "testFiles": [
         "test.ts"
