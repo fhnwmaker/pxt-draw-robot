@@ -1,6 +1,7 @@
 {
     "name": "pxt-draw-robot",
-    "description": "",
+    "version": "0.1.0",
+    "description": "FHNW Maker Studio's Draw Robot Extention",
     "dependencies": {
         "core": "*",
         "radio": "*",
@@ -24,5 +25,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
