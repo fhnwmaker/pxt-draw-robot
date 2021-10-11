@@ -1,0 +1,7 @@
+{
+  "drawrobot.drive|block": "drive",
+  "drawrobot.left|block": "to the left with angle $angle ° and radius $cmradius cm",
+  "drawrobot.right|block": "to the right with angle $angle ° and radius $cmradius cm",
+  "drawrobot.straight|block": "straight ahead for $time sec",
+  "{id:category}Drawrobot": "Drawrobot"
+}

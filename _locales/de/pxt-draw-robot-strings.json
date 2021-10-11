@@ -1,0 +1,7 @@
+{
+  "drawrobot.drive|block": "fahre",
+  "drawrobot.left|block": "nach links mit Winkel $angle ° und Radius $cmradius cm",
+  "drawrobot.right|block": "nach rechts mit Winkel $angle ° und Radius $cmradius cm",
+  "drawrobot.straight|block": "geradeaus für $time sek",
+  "{id:category}Drawrobot": "Malroboter"
+}
