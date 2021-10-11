@@ -10,9 +10,7 @@
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md",
-        "_locales/en/pxt-draw-robots-strings.json",
-        "_locales/de/pxt-draw-robots-strings.json"
+        "README.md"
     ],
     "testFiles": [
         "test.ts"
