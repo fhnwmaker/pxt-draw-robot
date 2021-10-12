@@ -45,7 +45,7 @@ namespace drawrobot {
 
     //%block="to the right with angle $angle ° and radius $cmradius cm"
     //% angle.min=1 angle.max=360 angle.defl=90
-    //% cmradius.min=10 cmradius.max=1000 cmradius.defl=10
+    //% cmradius.min=10 cmradius.max=1000 cmradius.defl=100
     export function right(angle: number, cmradius: number) {
         let radius2 = cmradius / 100;
         let innerRadius2 = radius2 - halveCarWidth;
