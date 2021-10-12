@@ -1,7 +1,7 @@
 /**
  * Custom blocks
  */
-//% weight=100 color=#4a0087 icon=""
+//% weight=100 color=#4a0087 icon="\uf1fc"
 namespace drawrobot {
     // witdth of car in m
     let halveCarWidth = 0.25;
