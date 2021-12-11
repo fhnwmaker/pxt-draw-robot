@@ -12,12 +12,12 @@ namespace drawrobot {
     //%block="pathelement with velocity $vel, $left revolutions left, and $right revolutions right"
     //% vel.min=10 vel.max=100 vel.defl=5
     export function move(vel: number, left: number, right: number) {
-        let driveCommand = pins.createBuffer(12);
+        let driveCommand = pins.createBuffer(4);
         driveCommand.setNumber(NumberFormat.UInt8LE, 0, 35);
         driveCommand.setNumber(NumberFormat.UInt8LE, 1, 77);
         driveCommand.setNumber(NumberFormat.UInt16LE, 2, vel);
-        driveCommand.setNumber(NumberFormat.UInt32LE, 4, left*100);
-        driveCommand.setNumber(NumberFormat.UInt32LE, 8, right*100);
+        // driveCommand.setNumber(NumberFormat.UInt32LE, 4, left*100);
+        // driveCommand.setNumber(NumberFormat.UInt32LE, 8, right*100);
         pins.i2cWriteBuffer(
             8,
             driveCommand,
