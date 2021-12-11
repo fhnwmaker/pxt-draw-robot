@@ -23,6 +23,7 @@ namespace drawrobot {
             driveCommand,
             false
         )
+        basic.pause(100);
     }
 
     //%block="stop move for $sec seconds"
@@ -35,6 +36,7 @@ namespace drawrobot {
             8,
             haltCommand,
             false
-        )    
+        )
+        basic.pause(100);
     }
 }
