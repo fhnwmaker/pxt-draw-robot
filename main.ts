@@ -27,7 +27,7 @@ namespace drawrobot {
 
     //%block="stop move for $sec seconds"
     export function halt(sec: number) {
-        let haltCommand = pins.createBuffer(2);
+        let haltCommand = pins.createBuffer(4);
         haltCommand.setNumber(NumberFormat.UInt8LE, 0, 35);
         haltCommand.setNumber(NumberFormat.UInt8LE, 1, 83);
         haltCommand.setNumber(NumberFormat.UInt16LE, 2, sec);
