@@ -1,7 +1,6 @@
 {
-  "drawrobot.drive|block": "fahre",
-  "drawrobot.left|block": "nach links mit Winkel $angle ° und Radius $cmradius cm",
-  "drawrobot.right|block": "nach rechts mit Winkel $angle ° und Radius $cmradius cm",
-  "drawrobot.straight|block": "geradeaus für $time sek",
+  "drawrobot.drive|block": "Zeichne",
+  "drawrobot.halt|block": "Halt für $sec Sekunden",
+  "drawrobot.move|block": "Bahnelement mit Geschwindigkeit $vel, $left Umdrehungen links und $right Umdrehungen rechts",
   "{id:category}Drawrobot": "Malroboter"
 }
