@@ -1,12 +1,11 @@
 {
     "name": "pxt-draw-robot",
     "version": "0.1.0",
-    "description": "FHNW Maker Studio's Draw Robot Extention",
+    "description": "FHNW Maker Studio's Draw Robot Extension",
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*",
-        "pxt-kitronik-motor-driver": "github:kitronikltd/pxt-kitronik-motor-driver#v0.0.7"
+        "microphone": "*"
     },
     "files": [
         "main.blocks",
