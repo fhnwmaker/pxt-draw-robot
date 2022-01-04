@@ -1,6 +1,6 @@
 {
   "drawrobot.drive|block": "Zeichne",
   "drawrobot.halt|block": "Halt für $sec Sekunden",
-  "drawrobot.move|block": "Bahnelement mit Geschwindigkeit $vel, $left Umdrehungen links und $right Umdrehungen rechts",
+  "drawrobot.move|block": "Bahnelement mit Geschwindigkeit $left Umdrehungen links und $right Umdrehungen rechts",
   "{id:category}Drawrobot": "Malroboter"
 }

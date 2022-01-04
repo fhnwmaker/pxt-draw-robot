@@ -1,6 +1,6 @@
 {
   "drawrobot.drive|block": "draw",
   "drawrobot.halt|block": "stop move for $sec seconds",
-  "drawrobot.move|block": "pathelement with velocity $vel, $left revolutions left, and $right revolutions right",
+  "drawrobot.move|block": "pathelement with $left revolutions left, and $right revolutions right",
   "{id:category}Drawrobot": "Drawrobot"
 }

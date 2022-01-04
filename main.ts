@@ -9,15 +9,13 @@ namespace drawrobot {
         basic.showIcon(IconNames.Skull);
     }
 
-    //%block="pathelement with velocity $vel, $left revolutions left, and $right revolutions right"
-    //% vel.min=10 vel.max=100 vel.defl=5
-    export function move(vel: number, left: number, right: number) {
-        let driveCommand = pins.createBuffer(12);
+    //%block="pathelement with $left revolutions left, and $right revolutions right"
+    export function move(left: number, right: number) {
+        let driveCommand = pins.createBuffer(10);
         driveCommand.setNumber(NumberFormat.UInt8LE, 0, 35);
         driveCommand.setNumber(NumberFormat.UInt8LE, 1, 77);
-        driveCommand.setNumber(NumberFormat.UInt16LE, 2, vel);
-        driveCommand.setNumber(NumberFormat.UInt32LE, 4, left*100);
-        driveCommand.setNumber(NumberFormat.UInt32LE, 8, right*100);
+        driveCommand.setNumber(NumberFormat.UInt32LE, 2, left*100);
+        driveCommand.setNumber(NumberFormat.UInt32LE, 6, right*100);
         pins.i2cWriteBuffer(
             8,
             driveCommand,
