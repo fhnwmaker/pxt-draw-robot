@@ -6,7 +6,6 @@ namespace drawrobot {
     //%block="draw"
     export function drive(path: () => void) {
         path();
-        basic.showIcon(IconNames.Skull);
     }
 
     //%block="pathelement with $left revolutions left, and $right revolutions right"
