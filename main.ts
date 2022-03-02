@@ -1,7 +1,7 @@
 /**
  * Custom blocks
  */
-//% weight=100 color=#43bae3 icon="\uf1fc"
+//% weight=100 color=#ff8800 icon="\uf1fc"
 namespace drawrobot {
     //%block="draw"
     export function drive(path: () => void) {
@@ -44,5 +44,20 @@ namespace drawrobot {
             false
         )
         basic.pause(100);
+    }
+
+    //%block="index of the pathelement in action"
+    export function readNrOfActivePathElement(): number {
+        const buffer = pins.i2cReadBuffer(8, 3, false);
+        let index = buffer.getNumber(NumberFormat.UInt16LE, 1);
+        return index ;
+    }
+
+    //%block="robot is driving"
+    export function isRunning(): boolean {
+        let buffer = pins.createBuffer(3);
+        buffer = pins.i2cReadBuffer(8, 3, false);
+        let status = buffer.getNumber(NumberFormat.UInt8LE, 0);
+        return (status == 1);
     }
 }
