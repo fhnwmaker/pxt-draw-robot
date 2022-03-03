@@ -27,7 +27,7 @@ namespace drawrobot {
         basic.pause(100);
     }
 
-    //%block="stop move for $sec seconds"
+    //%block="stop $id move for $sec seconds"
     export function halt(id: number, sec: number) {
         // IMPORTANT: buffer must correspond to application on arduino
         let haltCommand = pins.createBuffer(6);
