@@ -10,11 +10,13 @@ namespace drawrobot {
 
     //%block="pathelement $id with $left revolutions left, and $right revolutions right"
     export function move(id: number, left: number, right: number) {
+        let vel = 0; // not used yet!
         // IMPORTANT: buffer must correspond to application on arduino
-        let driveCommand = pins.createBuffer(12);
+        let driveCommand = pins.createBuffer(14);
         driveCommand.setNumber(NumberFormat.UInt8LE, 0, 35);
         driveCommand.setNumber(NumberFormat.UInt8LE, 1, 77);
         driveCommand.setNumber(NumberFormat.UInt16LE, 2, id);
+        driveCommand.setNumber(NumberFormat.UInt16LE, 2, vel);
         driveCommand.setNumber(NumberFormat.UInt32LE, 4, right*100);
         driveCommand.setNumber(NumberFormat.UInt32LE, 8, left*100);
         
@@ -24,7 +26,6 @@ namespace drawrobot {
             driveCommand,
             false
         )
-        basic.pause(100);
     }
 
     //%block="stop $id move for $sec seconds"
