@@ -8,15 +8,13 @@ namespace drawrobot {
         path();
     }
 
-    //%block="pathelement with $left revolutions left, and $right revolutions right"
-    export function move(left: number, right: number) {
-        const vel = 0; // velocity is not used yet!
-
+    //%block="pathelement $id with $left revolutions left, and $right revolutions right"
+    export function move(id: number, left: number, right: number) {
         // IMPORTANT: buffer must correspond to application on arduino
         let driveCommand = pins.createBuffer(12);
         driveCommand.setNumber(NumberFormat.UInt8LE, 0, 35);
         driveCommand.setNumber(NumberFormat.UInt8LE, 1, 77);
-        driveCommand.setNumber(NumberFormat.UInt16LE, 2, vel);
+        driveCommand.setNumber(NumberFormat.UInt16LE, 2, id);
         driveCommand.setNumber(NumberFormat.UInt32LE, 4, right*100);
         driveCommand.setNumber(NumberFormat.UInt32LE, 8, left*100);
         
@@ -30,11 +28,12 @@ namespace drawrobot {
     }
 
     //%block="stop move for $sec seconds"
-    export function halt(sec: number) {
+    export function halt(id: number, sec: number) {
         // IMPORTANT: buffer must correspond to application on arduino
-        let haltCommand = pins.createBuffer(4);
+        let haltCommand = pins.createBuffer(6);
         haltCommand.setNumber(NumberFormat.UInt8LE, 0, 35);
         haltCommand.setNumber(NumberFormat.UInt8LE, 1, 83);
+        haltCommand.setNumber(NumberFormat.UInt16LE, 2, id);
         haltCommand.setNumber(NumberFormat.UInt16LE, 2, sec);
         
         // send commend to the arduino
