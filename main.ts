@@ -48,7 +48,8 @@ namespace drawrobot {
 
     //%block="index of the pathelement in action"
     export function readNrOfActivePathElement(): number {
-        const buffer = pins.i2cReadBuffer(8, 3, false);
+        let buffer = pins.createBuffer(3);
+        buffer = pins.i2cReadBuffer(8, 3, false);
         let index = buffer.getNumber(NumberFormat.UInt16LE, 1);
         return index ;
     }
