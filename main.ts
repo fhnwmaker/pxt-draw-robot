@@ -17,8 +17,8 @@ namespace drawrobot {
         driveCommand.setNumber(NumberFormat.UInt8LE, 1, 77);
         driveCommand.setNumber(NumberFormat.UInt16LE, 2, id);
         driveCommand.setNumber(NumberFormat.UInt16LE, 4, vel);
-        driveCommand.setNumber(NumberFormat.UInt32LE, 6, right*100);
-        driveCommand.setNumber(NumberFormat.UInt32LE, 10, left*100);
+        driveCommand.setNumber(NumberFormat.UInt32LE, 6, right*1000);
+        driveCommand.setNumber(NumberFormat.UInt32LE, 10, left*1000);
         
         // send commend to the arduino
         pins.i2cWriteBuffer(
