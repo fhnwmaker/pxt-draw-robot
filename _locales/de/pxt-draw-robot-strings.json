@@ -1,8 +1,4 @@
 {
-  "drawrobot.drive|block": "Zeichne",
-  "drawrobot.halt|block": "Halt $id für $sec Sekunden",
-  "drawrobot.isRunning|block": "Roboter fährt",
-  "drawrobot.move|block": "Bahnelement $id mit $left Umdrehungen links und $right Umdrehungen rechts",
-  "drawrobot.readNrOfActivePathElement|block": "Index aktuelles Bahnelement",
+  "drawrobot.drive|block": "fahre mit $left Umdrehungen links und $right Umdrehungen rechts",
   "{id:category}Drawrobot": "Malroboter"
 }

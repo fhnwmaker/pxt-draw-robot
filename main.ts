@@ -3,22 +3,16 @@
  */
 //% weight=100 color=#ff8800 icon="\uf1fc"
 namespace drawrobot {
-    //%block="draw"
-    export function drive(path: () => void) {
-        path();
-    }
 
-    //%block="pathelement $id with $left revolutions left, and $right revolutions right"
-    export function move(id: number, left: number, right: number) {
+    //%block="drive with $left revolutions left, and $right revolutions right"
+    export function drive(left: number, right: number) {
         let vel = 0; // not used yet!
         // IMPORTANT: buffer must correspond to application on arduino
-        let driveCommand = pins.createBuffer(14);
+        let driveCommand = pins.createBuffer(10);
         driveCommand.setNumber(NumberFormat.UInt8LE, 0, 35);
         driveCommand.setNumber(NumberFormat.UInt8LE, 1, 77);
-        driveCommand.setNumber(NumberFormat.UInt16LE, 2, id);
-        driveCommand.setNumber(NumberFormat.UInt16LE, 4, vel);
-        driveCommand.setNumber(NumberFormat.UInt32LE, 6, right*1000);
-        driveCommand.setNumber(NumberFormat.UInt32LE, 10, left*1000);
+        driveCommand.setNumber(NumberFormat.UInt32LE, 2, right*1000);
+        driveCommand.setNumber(NumberFormat.UInt32LE, 6, left*1000);
         
         // send commend to the arduino
         pins.i2cWriteBuffer(
@@ -26,38 +20,14 @@ namespace drawrobot {
             driveCommand,
             false
         )
+        while (isRunning()) {
+            basic.pause(50);
+        }
     }
 
-    //%block="stop $id move for $sec seconds"
-    export function halt(id: number, sec: number) {
-        // IMPORTANT: buffer must correspond to application on arduino
-        let haltCommand = pins.createBuffer(6);
-        haltCommand.setNumber(NumberFormat.UInt8LE, 0, 35);
-        haltCommand.setNumber(NumberFormat.UInt8LE, 1, 83);
-        haltCommand.setNumber(NumberFormat.UInt16LE, 2, id);
-        haltCommand.setNumber(NumberFormat.UInt16LE, 4, sec);
-        
-        // send commend to the arduino
-        pins.i2cWriteBuffer(
-            8,
-            haltCommand,
-            false
-        )
-        basic.pause(100);
-    }
-
-    //%block="index of the pathelement in action"
-    export function readNrOfActivePathElement(): number {
-        let buffer = pins.createBuffer(3);
-        buffer = pins.i2cReadBuffer(8, 3, false);
-        let index = buffer.getNumber(NumberFormat.UInt16LE, 1);
-        return index ;
-    }
-
-    //%block="robot is driving"
-    export function isRunning(): boolean {
-        let buffer = pins.createBuffer(3);
-        buffer = pins.i2cReadBuffer(8, 3, false);
+    function isRunning(): boolean {
+        let buffer = pins.createBuffer(1);
+        buffer = pins.i2cReadBuffer(8, 1, false);
         let status = buffer.getNumber(NumberFormat.UInt8LE, 0);
         return (status == 1);
     }

@@ -1,8 +1,4 @@
 {
-    "drawrobot.drive|block": "draw",
-    "drawrobot.halt|block": "stop $id move for $sec seconds",
-    "drawrobot.isRunning|block": "robot is driving",
-    "drawrobot.move|block": "pathelement $id with $left revolutions left, and $right revolutions right",
-    "drawrobot.readNrOfActivePathElement|block": "index of the pathelement in action",
+    "drawrobot.drive|block": "drive with $left revolutions left, and $right revolutions right",
     "{id:category}Drawrobot": "Drawrobot"
 }
