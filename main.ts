@@ -21,7 +21,7 @@ namespace drawrobot {
             false
         )
         while (isRunning()) {
-            basic.pause(50);
+            basic.pause(20);
         }
     }
 
