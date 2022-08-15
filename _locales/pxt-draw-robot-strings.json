@@ -1,4 +1,4 @@
 {
-  "drawrobot.drive|block": "drive with $left revolutions left, and $right revolutions right",
-  "{id:category}Drawrobot": "Drawrobot"
+    "drawrobot.drive|block": "drive with $left revolutions left, and $right revolutions right",
+    "{id:category}Drawrobot": "Drawrobot"
 }

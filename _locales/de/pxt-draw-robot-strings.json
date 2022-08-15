@@ -1,4 +1,4 @@
 {
-  "drawrobot.drive|block": "fahre mit $left Umdrehungen links und $right Umdrehungen rechts",
-  "{id:category}Drawrobot": "Malroboter"
+    "drawrobot.drive|block": "fahre mit $left Umdrehungen links und $right Umdrehungen rechts",
+    "{id:category}Drawrobot": "Malroboter"
 }

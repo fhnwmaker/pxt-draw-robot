@@ -1,7 +1,7 @@
 {
     "name": "pxt-draw-robot",
     "version": "0.1.0",
-    "description": "FHNW Maker Studio's Draw Robot Extension",
+    "description": "FHNW Maker Studio's Drawing Robot Extension",
     "dependencies": {
         "core": "*",
         "radio": "*",
@@ -12,7 +12,8 @@
         "main.ts",
         "README.md",
         "_locales/en/pxt-draw-robot-strings.json",
-        "_locales/de/pxt-draw-robot-strings.json"
+        "_locales/de/pxt-draw-robot-strings.json",
+        "_locales/pxt-draw-robot-strings.json"
     ],
     "testFiles": [
         "test.ts"
