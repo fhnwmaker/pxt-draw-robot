@@ -1,4 +1,7 @@
 {
-    "drawrobot.drive|block": "drive with $left revolutions left, and $right revolutions right",
-    "{id:category}Drawrobot": "Drawrobot"
+  "OnOff.Off|block": "off",
+  "OnOff.On|block": "on",
+  "drawrobot.drive|block": "drive with $left revolutions left, and $right revolutions right",
+  "drawrobot.power|block": "switch motors to $onoff",
+  "{id:category}Drawrobot": "Drawrobot"
 }
