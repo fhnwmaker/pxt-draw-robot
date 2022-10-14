@@ -12,6 +12,12 @@ enum OnOff {
 namespace drawrobot {
     const I2C_ARDUINO_ADDRESS = 8
 
+    function wait_until_command_is_finished() {
+        basic.pause(20);
+        while (isRunning()) {
+            basic.pause(20);
+    }
+
     //%block="drive with $left revolutions left, and $right revolutions right"
     export function drive(left: number, right: number) {
         // IMPORTANT: buffer must correspond to application on arduino
@@ -28,10 +34,7 @@ namespace drawrobot {
             driveCommand,
             false
         )
-        basic.pause(20);
-        while (isRunning()) {
-            basic.pause(20);
-        }
+        wait_until_command_is_finished();
     }
 
     //%block="switch motors to $onoff"
@@ -48,10 +51,7 @@ namespace drawrobot {
             powerCommand,
             false
         )
-        basic.pause(20);
-        while (isRunning()) {
-            basic.pause(20);
-        }
+        wait_until_command_is_finished();
     }
 
     function isRunning(): boolean {
