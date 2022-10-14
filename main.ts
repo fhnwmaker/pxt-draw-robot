@@ -12,6 +12,13 @@ enum OnOff {
 namespace drawrobot {
     const I2C_ARDUINO_ADDRESS = 8
 
+    function isRunning(): boolean {
+        let buffer = pins.createBuffer(1);
+        buffer = pins.i2cReadBuffer(I2C_ARDUINO_ADDRESS, 1, false);
+        let status = buffer.getNumber(NumberFormat.UInt8LE, 0);
+        return (status == 1);
+    }
+
     function wait_until_command_is_finished() {
         basic.pause(20);
         while (isRunning()) {
@@ -55,10 +62,4 @@ namespace drawrobot {
         wait_until_command_is_finished();
     }
 
-    function isRunning(): boolean {
-        let buffer = pins.createBuffer(1);
-        buffer = pins.i2cReadBuffer(I2C_ARDUINO_ADDRESS, 1, false);
-        let status = buffer.getNumber(NumberFormat.UInt8LE, 0);
-        return (status == 1);
-    }
 }
