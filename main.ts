@@ -16,6 +16,7 @@ namespace drawrobot {
         basic.pause(20);
         while (isRunning()) {
             basic.pause(20);
+        }
     }
 
     //%block="drive with $left revolutions left, and $right revolutions right"
