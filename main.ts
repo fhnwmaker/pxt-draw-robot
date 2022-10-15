@@ -10,6 +10,7 @@ enum OnOff {
  */
 //% weight=100 color=#ff8800 icon="\uf1fc"
 namespace drawrobot {
+    // IMPORTANT: must correspond to the setting on the arduino
     const I2C_ARDUINO_ADDRESS = 8
 
     function isRunning(): boolean {
@@ -20,7 +21,8 @@ namespace drawrobot {
     }
 
     function wait_until_command_is_finished() {
-        basic.pause(20);
+        // give command some time; download and startup
+        basic.pause(50);  
         while (isRunning()) {
             basic.pause(20);
         }
@@ -28,7 +30,7 @@ namespace drawrobot {
 
     //%block="drive with $left revolutions left, and $right revolutions right"
     export function drive(left: number, right: number) {
-        // IMPORTANT: buffer must correspond to application on arduino
+        // IMPORTANT: buffer must correspond to application on the arduino
         let driveCommand = pins.createBuffer(11);
         driveCommand.setNumber(NumberFormat.UInt8LE, 0, 35);  // 35 => #
         driveCommand.setNumber(NumberFormat.UInt8LE, 1, 77);  // 77 => M
