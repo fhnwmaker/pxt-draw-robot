@@ -1,7 +1,14 @@
 {
+  "Accel.High|block": "hoch",
+  "Accel.Low|block": "tief",
+  "Accel.Medium|block": "mittel",
+  "Vel.Fast|block": "schnell",
+  "Vel.Medium|block": "mittel",
+  "Vel.Slow|block": "langsam",  
   "OnOff.Off|block": "aus",
   "OnOff.On|block": "ein",
   "drawrobot.drive|block": "fahre mit $left Umdrehungen links und $right Umdrehungen rechts",
   "drawrobot.power|block": "schalte Motoren $onoff",
+  "drawrobot.setup|block": "setze Geschwindigkeit auf %vel, Beschleunigung auf %accel",
   "{id:category}Drawrobot": "Malroboter"
 }

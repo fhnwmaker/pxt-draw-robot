@@ -1,7 +1,14 @@
 {
+  "Accel.High|block": "high",
+  "Accel.Low|block": "low",
+  "Accel.Medium|block": "medium",
   "OnOff.Off|block": "off",
   "OnOff.On|block": "on",
+  "Vel.Fast|block": "fast",
+  "Vel.Medium|block": "medium",
+  "Vel.Slow|block": "slow",
   "drawrobot.drive|block": "drive with $left revolutions left, and $right revolutions right",
   "drawrobot.power|block": "switch motors to $onoff",
+  "drawrobot.setup|block": "set speed to $vel and acceleration to %accel",
   "{id:category}Drawrobot": "Drawrobot"
 }
