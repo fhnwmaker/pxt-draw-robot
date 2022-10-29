@@ -10,5 +10,5 @@
   "drawrobot.drive|block": "drive with $left revolutions left, and $right revolutions right",
   "drawrobot.power|block": "switch motors to $onoff",
   "drawrobot.setup|block": "set speed to $vel and acceleration to %accel",
-  "{id:category}Drawrobot": "ciro"
+  "{id:category}Drawrobot": "Drawrobot"
 }
