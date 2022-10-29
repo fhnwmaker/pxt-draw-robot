@@ -3,12 +3,9 @@
     "version": "0.9.0",
     "description": "FHNW Maker Studio's Drawing Robot Extension",
     "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "core": "*"
     },
     "files": [
-        "main.blocks",
         "main.ts",
         "README.md",
         "_locales/en/pxt-draw-robot-strings.json",
