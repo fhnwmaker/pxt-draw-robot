@@ -10,5 +10,5 @@
   "drawrobot.drive|block": "fahre mit $left Umdrehungen links und $right Umdrehungen rechts",
   "drawrobot.power|block": "schalte Motoren $onoff",
   "drawrobot.setup|block": "setze Geschwindigkeit auf %vel, Beschleunigung auf %accel",
-  "{id:category}Drawrobot": "Malroboter"
+  "{id:category}Drawrobot": "ciro"
 }

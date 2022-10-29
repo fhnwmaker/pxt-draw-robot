@@ -1,7 +1,7 @@
 {
     "name": "pxt-draw-robot",
     "version": "0.1.0",
-    "description": "FHNW Maker Studio's Drawing Robot Extension",
+    "description": "ciro: FHNW Maker Studio's Drawing Robot Extension",
     "dependencies": {
         "core": "*",
         "radio": "*",
